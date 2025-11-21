@@ -1,18 +1,18 @@
-# About GTrader
+# About mytradingPRO
 
-[![Docker Automated Build](https://img.shields.io/docker/cloud/automated/gsoros/gtrader?style=plastic)](https://hub.docker.com/r/gsoros/gtrader/) [![Docker Build Status](https://img.shields.io/docker/cloud/build/gsoros/gtrader?style=plastic)](https://hub.docker.com/r/gsoros/gtrader/)
+[![Docker Automated Build](https://img.shields.io/docker/cloud/automated/gsoros/gtrader?style=plastic)](https://hub.docker.com/r/gsoros/mytradingPRO/) [![Docker Build Status](https://img.shields.io/docker/cloud/build/gsoros/mytradingpro?style=plastic)](https://hub.docker.com/r/gsoros/mytradingPRO/)
 
-GTrader is a trading strategy back-tester and bot manager.
+mytradingPRO is a trading strategy back-tester and bot manager.
 
 # Users
 
-Please use [GTrader-env](https://github.com/gsoros/GTrader-env) to set up the PHP, MySQL and Nginx-SSL environment in Docker containers.
+Please use [mytradingPRO-env](https://github.com/gsoros/mytradingPRO-env) to set up the PHP, MySQL and Nginx-SSL environment in Docker containers.
 
 # Developers
 
 #### Either run from the Dockerhub container...
 
-1. `docker run -d --name gtrader_php -p 127.0.0.1:9000:9000 gsoros/gtrader:latest`
+1. `docker run -d --name mytradingPRO_php -p 127.0.0.1:9000:9000 gsoros/mytradingpro:latest`
 2. inside the container, edit .env with your database settings
 3. configure your webserver to use php-fpm
 
@@ -28,8 +28,7 @@ Please use [GTrader-env](https://github.com/gsoros/GTrader-env) to set up the PH
 
 ##### Installation
 
-1. `git clone https://github.com/gsoros/GTrader.git`
-2. `cd GTrader`
+2. `cd mytradingPRO`
 3. `composer install`
 4. `npm install`
 5. `cp .env.example .env`
@@ -38,7 +37,7 @@ Please use [GTrader-env](https://github.com/gsoros/GTrader-env) to set up the PH
 8. set up db
 9. `php artisan migrate`
 10. `npm run dev`
-11. ``(crontab -l; echo -e "### GTrader Schedule\n* * * * * `which php` `pwd`/artisan schedule:run >> `pwd`/storage/logs/schedule.log 2>&1") | crontab -``
+11. ``(crontab -l; echo -e "### mytradingPRO Schedule\n* * * * * `which php` `pwd`/artisan schedule:run >> `pwd`/storage/logs/schedule.log 2>&1") | crontab -``
 12. `php artisan serve`
 
 # Screenshots
